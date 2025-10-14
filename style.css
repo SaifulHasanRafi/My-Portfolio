@@ -1,0 +1,668 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    color: #333;
+}
+
+/* ===== Header ===== */
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-size: 4rem;
+    color: #07f0fa;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.motto {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 400;
+    margin: 0 2rem;
+    flex-shrink: 0;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    color: #f4b400;
+}
+
+nav a.active {
+    color: #fff;
+}
+
+/* ===== Search Bar ===== */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    width: 150px;
+}
+
+.search-bar button {
+    background-color: #f4b400;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #e0a800;
+}
+
+/* ===== Home Section ===== */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    background-color: rgb(135, 222, 208);
+    padding: 5rem 9% 5rem;
+}
+
+.home-img img {
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    transform: scale(1.03);
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.home-content h1 span {
+    color: red;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.home-content p {
+    font-size: 1.8rem;
+}
+
+/* Typing Animation for “I’m a …” */
+.typing-text {
+    font-size: 3.4rem;
+    font-weight: 600;
+    position: relative;
+    color: #222;
+}
+
+.typing-text span {
+    position: relative;
+    color: red;
+}
+
+.typing-text span::before {
+    content: "Web Developer";
+    animation: typing 15s steps(1, end) infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: red;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    right: -5px;
+    top: 0;
+    animation: blink 0.75s infinite;
+}
+
+@keyframes typing {
+    0% {
+        content: "Web Developer";
+    }
+
+    33% {
+        content: "Aspiring AI/ML Engineer";
+    }
+
+    66% {
+        content: "Singer";
+    }
+
+    100% {
+        content: "Web Developer";
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ===== Social Icons ===== */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid red;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0.5rem;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: rgb(0, 255, 234);
+    box-shadow: 0 0 25px rgb(0, 255, 234);
+}
+
+/* ===== Section Standard ===== */
+section {
+    padding: 4rem 9%;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #f4b400;
+}
+
+/* ===== Education ===== */
+#education {
+    background-color: #d6e6ff;
+}
+
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.education-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+}
+
+.education-box img {
+    width: 70px;
+    height: 70px;
+    margin-right: 2rem;
+}
+
+.education-details h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-details p {
+    font-size: 1.4rem;
+    color: #666;
+}
+
+/* ===== Skills ===== */
+#skills {
+    background-color: #fff3d6;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill-box {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 180px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-box img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+.skill-details h3 {
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: 600;
+}
+
+
+/* ===== Hobbies ===== */
+#hobbies {
+    background-color: #f0d6ff;
+}
+
+.hobbies-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.hobby-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    flex: 1 1 220px;
+    max-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hobby-card img {
+    width: 100%;
+    max-width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+.hobby-card h3 {
+    font-size: 2rem;
+    color: #f4b400;
+    margin-bottom: 1rem;
+}
+
+.hobby-card p {
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 1.6;
+}
+/* ===== Projects Section ===== */
+#projects {
+    background-color: #d6ffd6;
+    /* Soft distinct background */
+    padding: 4rem 9%;
+}
+
+.projects-section h2 {
+    font-size: 3rem;
+    color: #f4b400;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.project-images img {
+    width: 100%;
+    height: 200px;
+    /* Slightly larger */
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+    transform: scale(1.05);
+}
+
+.project-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Design for Projects */
+@media (max-width: 768px) {
+    .project-images {
+        grid-template-columns: 1fr;
+        /* Stack images on smaller screens */
+    }
+}
+/* Achievements Section */
+#achievements {
+    background-color: #d6fff6;
+    /* Distinct background for achievement section */
+    padding: 4rem 9%;
+}
+
+.achievements-section h2 {
+    font-size: 3rem;
+    color:#f4b400;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Grid container for achievements */
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    /* Center each card horizontally in its cell */
+    justify-content: center;
+    /* Center the whole grid if row has fewer items */
+    align-items: start;
+}
+
+/* Individual achievement card */
+.achievement-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card img {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    /* Larger size for better visibility */
+    object-fit: cover;
+    /* Ensures image fills the box without distortion */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-card h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.achievement-card p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Design for Achievements */
+@media (max-width: 1024px) {
+    .achievements-container {
+        gap: 20px;
+    }
+
+    .achievement-card img {
+        max-width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .achievements-container {
+        grid-template-columns: 1fr;
+        /* Stack cards vertically on small screens */
+    }
+
+    .achievement-card img {
+        max-width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievement-card img {
+        max-width: 150px;
+        height: 150px;
+    }
+
+    .achievement-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .achievement-card p {
+        font-size: 1rem;
+    }
+}
+
+/* ===== Contact ===== */
+#contact {
+    background-color: #fff0f0;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-card {
+    flex: 0 0 200px;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card.facebook i {
+    color: #1877F2;
+}
+
+.contact-card.github i {
+    color: #333;
+}
+
+.contact-card.instagram i {
+    color: #E4405F;
+}
+
+.contact-card.linkedin i {
+    color: #0A66C2;
+}
+
+.contact-card.email i {
+    color: #D44638;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: #f4b400;
+}
+
+.contact-card:hover i {
+    color: #f4b400;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:1024px) {
+    #home {
+        gap: 4rem;
+    }
+
+    .hobbies-content {
+        gap: 1.5rem;
+    }
+}
+
+@media(max-width:768px) {
+    #home {
+        flex-direction: column;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 2rem;
+    }
+
+    .skills-container,
+    .contact-content,
+    .education-container,
+    .hobbies-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-box {
+        width: 80%;
+    }
+
+    .hobby-card {
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media(max-width:480px) {
+    .hobby-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hobby-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .hobby-card p {
+        font-size: 1.2rem;
+    }
+
+    .project-images {
+        flex-direction: column;
+    }
+
+    .project-images img {
+        width: 100%;
+        height: auto;
+    }
+}
