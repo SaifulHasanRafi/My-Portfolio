@@ -169,7 +169,7 @@ nav a.active {
     height: 100%;
     right: -5px;
     top: 0;
-    animation: blink 0.4s infinite;
+    animation: blink 0.60s infinite;
 }
 
 @keyframes typing {
@@ -669,3 +669,4 @@ section h2 {
     }
 
 }
+
