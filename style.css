@@ -169,7 +169,7 @@ nav a.active {
     height: 100%;
     right: -5px;
     top: 0;
-    animation: blink 0.75s infinite;
+    animation: blink 0.4s infinite;
 }
 
 @keyframes typing {
@@ -177,11 +177,15 @@ nav a.active {
         content: "Web Developer";
     }
 
-    33% {
+    25% {
         content: "Aspiring AI/ML Engineer";
     }
 
-    66% {
+    50% {
+        content: "Research Enthusiast";
+    }
+
+    75% {
         content: "Singer";
     }
 
@@ -191,9 +195,7 @@ nav a.active {
 }
 
 @keyframes blink {
-
-    0%,
-    100% {
+    0%, 100% {
         opacity: 1;
     }
 
@@ -665,4 +667,5 @@ section h2 {
         width: 100%;
         height: auto;
     }
+
 }
